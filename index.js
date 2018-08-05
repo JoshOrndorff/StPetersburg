@@ -2,9 +2,15 @@
 
 document.addEventListener("DOMContentLoaded", function(event){
 
+  // DOM Elements
+  var playButton = document.getElementById("play")
+  var timesBox = document.getElementById("timesBox")
+
+  // Set default number of times
+  timesBox.value = timesBox.value != "" ? timesBox.value : 1
   // Attach event listeners for play button.
-  document.getElementById("play").addEventListener("click", () => {
-    var times = parseInt(document.getElementById("timesBox").value, 10)
+  playButton.addEventListener("click", () => {
+    var times = parseInt(timesBox.value, 10)
     var payoffs = repeatedPlay(times)
 
     var mean = payoffs.reduce((x, y) => (x+y))
