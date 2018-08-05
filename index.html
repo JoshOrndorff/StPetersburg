@@ -3,17 +3,31 @@
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>St Petersburg Paradox</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script type="text/javascript" src="index.js"></script>
   </head>
 
   <body>
-    <input type="number" min="1" id="timesBox" />
+    <h1>About the Game</h1>
+    <p>You're invited to play a game. The game begins with one dollar in the pot. You flip a coin.</p>
+    <ul>
+      <li>Heads: You win the pot</li>
+      <li>Tails: The pot doubles and the game repeats</li>
+    </ul>
 
-    <p>The pot begins at 1 dollar. A coin is flipped.
-      Heads: You win the pot.
-      Tails: The pot doubles and the game repeats</p>
-    <button id="play">Play</button>
+
+    <p>How much would you pay to play this game? Let's simulate a few times to get a sense of how it works</p>
+
+    <button id="playOne">Play</button>
     <p id="answer"></p>
+
+    <h1>Expected Value</h1>
+
+    <input type="number" min="1" id="timesBox" />
+    <button id="playMany">Play Several</button>
+
+    <div id="line"></div>
+    <div id="histo"></div>
 
   </body>
 </html>
